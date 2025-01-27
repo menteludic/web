@@ -1,0 +1,12 @@
+.ui.pagination.menu
+  if pagination.pageNumber > 0
+    .item
+      a(href= filters.urlFor(pagination.href.first)) <<
+    .item
+      a(href= filters.urlFor(pagination.href.previous)) <
+  .item= `${pagination.pageNumber + 1} de ${pagination.pages.length}`
+  if pagination.pageNumber < pagination.pages.length - 1
+    .item
+      a(href= filters.urlFor(pagination.href.next)) >
+    .item
+      a(href= filters.urlFor(pagination.href.last)) >>

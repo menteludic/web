@@ -1,0 +1,25 @@
+---
+pagination:
+  data: collections.rolLudotecaSorted
+  size: 9
+---
+//- Plantilla para la paginación de juegos de la ludoteca de rol
+extends ../../includes/layouts/full_page.pug
+
+block contents
+  #ttrpg_ludoteca
+    .ui.basic.segment
+      h1.header Nuestra ludoteca de rol
+
+      .ui.link.cards
+        for item in pagination.items
+          .card
+            .content
+              .header= item.data.title
+            a(href= filters.urlFor(item.url))
+              img.ui.medium.image.rounded(src= filters.urlFor(`/public/images/juegos_de_rol/ludoteca/${item.data.image}`))
+            .extra.content
+              .meta= item.data.system
+              .meta= item.data.format
+
+      include ../../includes/layouts/includes/paginator.pug

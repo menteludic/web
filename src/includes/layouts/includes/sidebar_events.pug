@@ -1,0 +1,13 @@
+.ui.basic.segment
+  .ui.clearing.segment.vertical
+    h1.header Eventos Anteriores
+
+    .ui.bulleted.list
+      each event in collections.eventsSorted
+        if event.data.eventDate
+          .item
+            .date
+              b= event.data.eventDate
+            .link
+              a(href= filters.urlFor(event.data.permalink))= event.data.pageTitle
+

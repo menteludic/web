@@ -1,0 +1,19 @@
+---
+title: Eventos
+---
+extends ../includes/layouts/full_page.pug
+
+block contents
+  #events
+    .ui.basic.segment
+      h1.header Eventos
+
+      .ui.stackable.grid.container
+        .row
+          .ten.wide.column
+            .video
+              video.video-js(controls= true, preload= 'auto', 'data-setup'='{ "width": 600, "height": 400 }')
+                source(src= filters.urlFor('/public/images/event/timelapse_moralzarzal_2019.mp4') , type= 'video/mp4')
+          .six.wide.column
+            include ../includes/layouts/includes/sidebar_events.pug
+

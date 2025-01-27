@@ -1,0 +1,79 @@
+doctype html
+html
+  head
+    include ../includes/head.pug
+
+  body.pusheable
+    // Following Menu
+    .ui.large.top.fixed.hidden.menu
+      .ui.container
+        include ../includes/navbar.pug
+
+    // Sidebar Menu
+    .ui.vertical.inverted.sidebar.menu
+      include ../includes/navbar.pug
+
+    // Page content
+    .pusher
+      main
+        .ui.inverted.vertical.center.aligned.segment.navbar
+          .ui.container
+            .ui.large.secondary.inverted.pointing.menu
+              a.toc.item
+                i.sidebar.icon
+              include ../includes/navbar.pug
+
+        .ui.stackable.grid.container
+          .row
+            .ten.wide.column
+              .ui.basic.segment
+                h1.header= pageTitle
+              .ui.basic.segment
+                block contents
+                  != content
+              .ui.basic.segment
+                .ui.top.attached.tabular.menu
+                  .item.active('data-tab'= 'photo') Fotos
+                  - if (schedule.length)
+                    .item('data-tab'= 'schedule') Programación
+                  - if (sponsors.length)
+                    .item('data-tab'= 'sponsor') Patrocinadores
+
+                .ui.tab.active('data-tab'= 'photo')
+                  .ui.basic.segment
+                    #gallery.unite-gallery(style= 'display:none;')
+                      - for(let i = 0; i < imagesCount; i++)
+                        img(src= filters.urlFor(`${imagesFolder}/fotos/thumbs/${i+1}.jpg`) 'data-image'= filters.urlFor(`${imagesFolder}/fotos/${i+1}.jpg`), 'data-description'= '', alt= '')
+
+                - if (schedule.length)
+                  .ui.tab('data-tab'= 'schedule')
+                    .ui.basic.segment
+                      each image in schedule
+                        img(src= filters.urlFor(`${imagesFolder}/${image}`), 'data-description'= '', alt= '')
+
+                - if (sponsors.length)
+                  .ui.tab('data-tab'= 'sponsor')
+                    .ui.basic.segment
+                      .ui.three.stackable.cards
+                        each sponsor in sponsors
+                          .card
+                            - if (sponsor.name)
+                              .content
+                                h3= sponsor.name
+                            .image
+                              img(src= filters.urlFor(`${imagesFolder}${sponsor.img}`) 'data-description'= '', alt= '')
+
+
+            .four.wide.column
+              .ui.container
+                - if(image)
+                  .ui.basic.segment
+                    img.ui.image.round(src= filters.urlFor(`${imagesFolder}/${image}`), alt= title)
+                .six.wide.column
+                  include ../includes/sidebar_events.pug
+
+
+
+      // Footer
+      include ../includes/footer.pug
+

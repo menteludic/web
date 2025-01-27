@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    include includes/head.pug
+
+  body.pusheable
+    // Following Menu
+    .ui.large.top.fixed.hidden.menu
+      .ui.container
+        include includes/navbar.pug
+
+    // Sidebar Menu
+    .ui.vertical.inverted.sidebar.menu
+      include includes/navbar.pug
+
+    // Page content
+    .pusher
+      main
+        .ui.inverted.vertical.center.aligned.segment.navbar
+          .ui.container
+            .ui.large.secondary.inverted.pointing.menu
+              a.toc.item
+                i.sidebar.icon
+              include includes/navbar.pug
+
+        .ui.stackable.grid.container
+          .row
+            .ten.wide.column
+              block contents
+            .four.wide.column
+              block side_bar
+
+      // Footer
+      include includes/footer.pug
+

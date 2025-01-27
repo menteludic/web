@@ -1,0 +1,23 @@
+{
+  "name": "portalludico",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ROOT_FOLDER= node_modules/.bin/eleventy --serve",
+    "deploy": "node_modules/.bin/eleventy --quiet && node deploy.js",
+    "debug": "DEBUG=Eleventy* node_modules/.bin/eleventy --serve"
+  },
+  "author": "Roberto M. Oliva",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "cli-progress": "^3.12.0",
+    "dotenv": "^16.4.5",
+    "ftp-deploy": "^2.4.7",
+    "ramda": "^0.30.1",
+    "sass": "^1.79.4"
+  }
+}

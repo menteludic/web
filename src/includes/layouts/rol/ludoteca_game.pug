@@ -1,0 +1,55 @@
+extends ../full_page.pug
+
+block contents
+  #ttrpg_ludoteca
+    .ui.basic.segment
+      h1.header= title
+
+      .ui.grid
+        .twelve.wide.column
+          img.ui.medium.image.left.floated.rounded(src= filters.urlFor(`/public/images/juegos_de_rol/ludoteca/${image}`), alt= title)
+
+          p!= content
+
+        .four.wide.column
+          .ui.list
+            if editorial
+              .item
+                i.folder.icon
+                .content
+                  .header Editorial
+                  .description= editorial
+            if isbn
+              .item
+                i.folder.icon
+                .content
+                  .header ISBN
+                  .description= isbn
+            if type
+              .item
+                i.folder.icon
+                .content
+                  .header Tipo
+                  .description= type
+            if web
+              .item
+                i.folder.icon
+                .content
+                  .header Web
+                  a.description(href= web)= web
+            if format
+              .item
+                i.folder.icon
+                .content
+                  .header Formato
+                  .description= format
+            if system
+              .item
+                i.folder.icon
+                .content
+                  .header Sistema
+                  .description= system
+
+
+
+

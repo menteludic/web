@@ -1,0 +1,21 @@
+---
+title: Juegos de Mesa
+---
+extends ../includes/layouts/full_page.pug
+
+block contents
+  #boardgames
+    .ui.basic.segment
+      h1.header Juegos de Mesa
+      p Te invitamos a disfrutar del emocionante mundo de los juegos de mesa. Aquí, tanto principiantes como expertos pueden explorar una amplia variedad de juegos, desde clásicos hasta las últimas novedades. Nuestro objetivo es crear un ambiente acogedor y respetuoso donde la diversión y la camaradería sean protagonistas. Ven y disfruta de desafíos llenos de ingenio y creatividad. ¡Únete a nosotros para muchas horas de entretenimiento y emoción!
+
+      p ¡Vamos a jugar!
+
+    .ui.basic.segment
+      img.ui.image.fluid.rounded(src= filters.urlFor("/public/images/juegos_de_mesa/portada.png"), alt="Asociación Portal Lúdico")
+
+    .ui.basic.segment
+      h1.header Ludoteca de Juegos de Mesa la Asociación
+      | Para consultar lo ludoteca de Juegos de Mesa de la Asociación, haz click en la siguiente imagen:
+      a(href= siteInfo.bggLocationSrc, target='_blank', title='Consulta la ludoteca de la Asociación en la BGG')
+        img.ui.image.tiny.bgg(src= filters.urlFor("/public/images/juegos_de_mesa/bgg_logo.jpeg"), alt="Asociación Portal Lúdico")

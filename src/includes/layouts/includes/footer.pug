@@ -1,0 +1,28 @@
+#footer
+  .ui.inverted.vertical.footer.segment
+    .ui.container
+      .ui.stackable.inverted.equal.height.stackable.grid
+        .three.wide.column
+          img.ui.image.portalludico.logo_portalludico(src= filters.urlFor('/public/images/logos/portalludico_footer.png'), alt= 'Asociación Portal Lúdico')
+        .seven.wide.column
+          h4.ui.inverted.header Síguenos
+          .ui.inverted.link.list
+            .item
+              i.icon.twitter
+              .content
+                a.item(href= siteInfo.contactLinks.twitter, target= '_blank')  Twitter
+            .item
+              i.icon.facebook
+              .content
+                a.item(href= siteInfo.contactLinks.facebook, target= '_blank')  Facebook
+            .item
+              i.icon.instagram
+              .content
+                a.item(href= siteInfo.contactLinks.instagram, target= '_blank')  Instagram
+            .item
+              i.icon.envelope
+              .content
+                a.item(href= siteInfo.contactLinks.mail, target= '_blank')  Correo
+  .ui.inverted.vertical.segment
+    .ui.container.text
+      a(href= filters.urlFor('/pages/politica_privacidad/')) Aviso legal y política de privacidad

@@ -1,0 +1,55 @@
+---
+title: Incio
+---
+extends includes/layouts/side_bar.pug
+
+block contents
+  #index
+    .ui.basic.padded.segment
+      img.image.ui.huge.rounded(src= filters.urlFor('/public/images/index/group.jpg'), alt='Asociación Portal Lúdico')
+    .ui.basic.padded.segment
+      .header
+        h1 Bienvenido a nuestra web
+      .content
+        p Asociación sin animo de lucro ubicada en Collado Villalba (Madrid) pero de ámbito nacional, orientada a la difusión y creación de actividades relacionadas con los juegos en sus diferentes variantes educolúdicas.
+    .ui.basic.padded.segment
+      .ui.three.column.grid
+        .column.section
+          h2.ui.center.aligned.icon.header
+            i.circular.chess.pawn.icon
+            | Juegos de Mesa
+
+          .ui.content.center.aligned
+            | Explora una amplia variedad de juegos de mesa en un ambiente acogedor y divertido, ideal para principiantes y expertos.
+            br
+          .extra
+            a.ui.basic.button(href= filters.urlFor('/pages/juegos_de_mesa/index.html'))
+              | ¡Vamos a jugar!
+              i.angle.right.icon
+        .column.section
+          h2.ui.center.aligned.icon.header
+            i.circular.user.secret.icon
+            | Juegos de Rol
+            br
+          .content.section
+            | Sumérgete en aventuras épicas y crea historias inolvidables con nuestra comunidad de juegos de rol abierta a todos.
+            |
+          .extra
+            a.ui.basic.button(href= filters.urlFor('/pages/juegos_de_rol/index.html'))
+              | ¡Prepárate para la aventura!
+              i.angle.right.icon
+        .column.section
+          h2.ui.center.aligned.icon.header
+            i.circular.warehouse.icon
+            | Miniaturas
+          .content
+            | Disfruta de intensas batallas estratégicas y perfecciona tus habilidades de pintura de miniaturas en un entorno creativo y preciso.
+            br
+          .extra
+            a.ui.basic.button(href= filters.urlFor('/pages/miniaturas/index.html'))
+              | ¡Que comiencen las batallas!
+              i.angle.right.icon
+
+block side_bar
+  include includes/layouts/includes/sidebar.pug
+
