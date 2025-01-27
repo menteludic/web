@@ -1,0 +1,11 @@
+---
+title: Eventos
+---
+extends ../includes/layouts/full_page.pug
+
+block contents
+  #calendar
+    .ui.basic.segment
+      h1.header Calendario Actividades
+
+      iframe(src= "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FMadrid&showPrint=0&src=490e07c35a7c1f7e13d0b7636bb8134ec73d638a5979933d6eb3955b02fa2da6%40group.calendar.google.com&color=%23039BE5&color=%23B39DDB&color=%23E67C73&color=%23E4C441&color=%23EF6C00&color=%23009688&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no")

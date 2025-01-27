@@ -1,8 +1,9 @@
 .ui.clearing.segment.vertical
   .ui.right.aligned.container
-    .header
-      h1
-        a(href= 'https://portalludico.fillout.com/altas', target='_blank') Inscríbete
+    .ui.red.basic.big.button
+      a(href= 'https://portalludico.fillout.com/altas', target='_blank')
+        i.question.pencil.icon
+        | Inscríbete
 
 .ui.clearing.segment.vertical
   .ui.right.aligned.container
@@ -11,3 +12,9 @@
         i.question.circle.outline.icon
         | Preguntas Frecuentes
 
+.ui.clearing.segment.vertical
+  .ui.right.aligned.container
+    .ui.red.basic.big.button
+      a(href= filters.urlFor('/pages/calendar'), title= 'Calendario Actividades')
+        i.question.calendar.outline.icon
+        | Calendario
