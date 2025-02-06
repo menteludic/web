@@ -3,10 +3,13 @@
   // Hover to view descriptions of existing attributes.
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Run Metalsmith",
-      "program": "${workspaceFolder}/metalsmith.js"
-    }
+  "configurations": [{
+    "name": "Build Site",
+    "type": "node",
+    "request": "launch",
+    "cwd": "${workspaceFolder}",
+    "runtimeVersion": "20",
+    "runtimeExecutable": "npm",
+    "runtimeArgs": ["run", "build"]
+  }]
+}

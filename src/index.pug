@@ -1,12 +1,13 @@
 ---
 title: Incio
 ---
-extends includes/layouts/side_bar.pug
+extends includes/layouts/full_page.pug
+include includes/layouts/mixins/blogList.pug
 
 block contents
   #index
     .ui.basic.padded.segment
-      img.image.ui.huge.rounded(src= filters.urlFor('/public/images/index/group.jpg'), alt='Asociación Portal Lúdico')
+      img.image.ui.big.rounded(src= filters.urlFor('/public/images/index/group.jpg'), alt='Asociación Portal Lúdico')
     .ui.basic.padded.segment
       .header
         h1 Bienvenido a nuestra web
@@ -15,44 +16,24 @@ block contents
           .text Somos una asociación de la sierra de Madrid que desde 2017 disfrutamos y hacemos disfrutar de un ocio sano y enriquecedor.
           .text A lo largo de estos años hemos creado una comunidad en la que todos y todas somos bienvenidos, así que no dudes en explorar esta web, conocernos y ponerte en contacto con nosotros.
           .text Actualmente con más de 90 socios y socias, y un local propio, realizamos multitud de actividades dirigidas tanto a socios como a quien nos lo solicite.
+
     .ui.basic.padded.segment
-      .ui.three.column.grid
-        .column.section
-          h2.ui.center.aligned.icon.header
-            i.circular.chess.pawn.icon
-            | Juegos de Mesa
+      .ui.accordion
+        each item in collections.frontpageSection
+          .ui.segment(class= item.data.color)
+            .title
+              .ui.header
+                i(class= `inverted ${item.data.color} circular ${item.data.icon} icon`)
+                .content= item.data.title
+            .content
+              .ui.container.segment.block.clear
+                != item.content
+                a.ui.basic.button.right.floated(href= filters.urlFor(item.data.url))
+                  | Más información
+                  i.right.arrow.icon
+                div(style= 'clear: both')
 
-          .ui.content.center.aligned
-            | Explora una amplia variedad de juegos de mesa en un ambiente acogedor y divertido, ideal para principiantes y expertos.
-            br
-          .extra
-            a.ui.basic.button(href= filters.urlFor('/pages/juegos_de_mesa/index.html'))
-              | ¡Vamos a jugar!
-              i.angle.right.icon
-        .column.section
-          h2.ui.center.aligned.icon.header
-            i.circular.user.secret.icon
-            | Juegos de Rol
-            br
-          .content.section
-            | Sumérgete en aventuras épicas y crea historias inolvidables con nuestra comunidad de juegos de rol abierta a todos.
-            |
-          .extra
-            a.ui.basic.button(href= filters.urlFor('/pages/juegos_de_rol/index.html'))
-              | ¡Prepárate para la aventura!
-              i.angle.right.icon
-        .column.section
-          h2.ui.center.aligned.icon.header
-            i.circular.warehouse.icon
-            | Miniaturas
-          .content
-            | Disfruta de intensas batallas estratégicas y perfecciona tus habilidades de pintura de miniaturas en un entorno creativo y preciso.
-            br
-          .extra
-            a.ui.basic.button(href= filters.urlFor('/pages/miniaturas/index.html'))
-              | ¡Que comiencen las batallas!
-              i.angle.right.icon
+      .ui.segment
+        +blogList(collections.blogFrontpage)
 
-block side_bar
-  include includes/layouts/includes/sidebar.pug
 

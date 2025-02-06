@@ -1,6 +1,28 @@
 $color-primary: #333333;
 
+$color-menteludic1: #2460A1;
+$color-menteludic2: #ca7daa;
+$color-menteludic3: #93c7d5;
+$color-menteludic4: #90ab33;
+$color-menteludic5: #ca5228;
+$color-menteludic6: #d8872d;
+$color-menteludic7: #c0cd39;
+$color-menteludic8: #eac72c;
+
+$color-boardgames: $color-menteludic1;
+$color-ttrpg: $color-menteludic2;
+$color-wargames: $color-menteludic3;
+$color-events: $color-menteludic4;
+$color-about: $color-menteludic5;
+$color-faq: $color-menteludic5;
+$color-about: $color-menteludic6;
+$color-contact: $color-menteludic7;
+$color-calendar: $color-menteludic8;
+$color-blog: $color-menteludic4;
+
 body {
+  font-family: 'Rubik', serif;
+
   #footer {
     .logo_portalludico {
       width: 100px;
@@ -53,6 +75,82 @@ body {
   display: none;
 }
 
+#boardgames{
+  .ui.segment:not(.basic){
+    border-top: 2px solid $color-boardgames !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+#ttrpg, #ttrpg_ludoteca{
+  .ui.segment:not(.basic){
+    border-top: 2px solid $color-ttrpg !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+#wargames{
+  .ui.segment:not(.basic){
+    border-top: 2px solid $color-wargames !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+#events{
+  .ui.segment:not(.basic){
+    border-top: 2px solid $color-events !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+#about{
+  .ui.segment:not(.basic){
+    border-top: 2px solid $color-about !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+#contact{
+  .ui.segment:not(.basic){
+    border-top: 2px solid $color-contact !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+#faq{
+  .ui.segment:not(.basic){
+    border-top: 2px solid $color-faq !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+#calendar{
+  .ui.segment:not(.basic){
+    border-top: 2px solid $color-calendar !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+#blog_entry{
+  .ui.segment:not(.basic){
+    border-top: 2px solid $color-blog !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .title_image {
+    max-height: 500px;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .ui.fixed.menu {
     display: none !important;
@@ -72,6 +170,43 @@ body {
       min-height: 120px;
       text-align: center;
     }
+  }
+  .ui.container {
+    margin: 0 auto;
+  }
+
+  .ui.segment:not(.basic) {
+    &.boardgames {
+      border-top: 2px solid $color-boardgames !important;
+    }
+    &.ttrpg {
+      border-top: 2px solid $color-ttrpg !important;
+    }
+    &.wargames {
+      border-top: 2px solid $color-wargames !important;
+    }
+    &.events {
+      border-top: 2px solid $color-events !important;
+    }
+    &.about {
+      border-top: 2px solid $color-about !important;
+    }
+  }
+
+  i.icon.boardgames {
+    background-color: $color-boardgames !important;
+  }
+  i.icon.ttrpg {
+    background-color: $color-ttrpg !important;
+  }
+  i.icon.wargames {
+    background-color: $color-wargames !important;
+  }
+  i.icon.events {
+    background-color: $color-events !important;
+  }
+  i.icon.about {
+    background-color: $color-about !important;
   }
 }
 

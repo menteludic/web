@@ -13,11 +13,18 @@ $(document).ready(function() {
   // create sidebar and attach to menu open
   $('.ui.sidebar').sidebar('attach events', '.toc.item');
   $('.dropdown').dropdown();
-  $('.ui.accordion').accordion();
+  $('#faq .ui.accordion').accordion();
+  $('#index .ui.accordion').accordion({
+    selector: {
+      trigger: '.title'
+    }
+  });
   $('.ui.tabular.menu .item').tab();
   $('.unite-gallery').unitegallery({
     lightbox_type: 'compact'
   });
 
-  videojs(document.querySelector('.video-js'));
+  if (document.querySelector('.video-js')) {
+    videojs(document.querySelector('.video-js'));
+  }
 });

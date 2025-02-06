@@ -5,8 +5,10 @@ module.exports = {
 	metaDescription: "",
 	urls: {
     home: '/',
-    juegos_de_mesa: '/pages/juegos_de_mesa/',
-    juegos_de_rol: '/pages/juegos_de_rol/',
-    miniaturas: '/pages/miniaturas/'
+    boardgames: '/pages/boardgames',
+    ttrpg: '/pages/ttrpg',
+    wargames: '/pages/wargames',
+    events: '/pages/events',
+    about: '/pages/about'
   }
 };

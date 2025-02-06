@@ -8,7 +8,7 @@ extends ../../includes/layouts/full_page.pug
 
 block contents
   #ttrpg_ludoteca
-    .ui.basic.segment
+    .ui.segment
       h1.header Nuestra ludoteca de rol
 
       .ui.link.cards
@@ -17,7 +17,7 @@ block contents
             .content
               .header= item.data.title
             a(href= filters.urlFor(item.url))
-              img.ui.medium.image.rounded(src= filters.urlFor(`/public/images/juegos_de_rol/ludoteca/${item.data.image}`))
+              img.ui.medium.image.rounded(src= filters.urlFor(`/public/images/ttrpg/ludoteca/${item.data.image}`))
             .extra.content
               .meta= item.data.system
               .meta= item.data.format

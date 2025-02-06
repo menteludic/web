@@ -2,22 +2,27 @@
 title: Eventos
 ---
 extends ../includes/layouts/full_page.pug
+include ../includes/layouts/mixins/blogList.pug
 
 block contents
   #events
-    .ui.basic.segment
+    .ui.segment
       h1.header Eventos
 
       p Dirigidos a familias, niños, jóvenes y no tan jóvenes. En su gran mayoría externos, y promovidos por ayuntamientos de la sierra, donde llevamos nuestra ludoteca y enseñamos a jugar y aconsejamos a cualquiera que quiera acompañarnos.
       p Con más de 20 eventos externos a nuestras espaldas, en algunos casos con más de 1000 participantes durante un fin de semana, también movilizamos ilustradores, cosplayers, tiendas de la sierra y otras colaboraciones para hacer eventos inolvidables.
 
-    .ui.basic.segment
-      .ui.stackable.grid.container
-        .row
-          .ten.wide.column
-            .video
-              video.video-js(controls= true, preload= 'auto', 'data-setup'='{ "width": 600, "height": 400 }')
-                source(src= filters.urlFor('/public/images/event/timelapse_moralzarzal_2019.mp4') , type= 'video/mp4')
-          .six.wide.column
-            include ../includes/layouts/includes/sidebar_events.pug
+      .ui.basic.segment
+        .ui.stackable.grid.container
+          .row
+            .ten.wide.column
+              .video
+                video.video-js(controls= true, preload= 'auto', 'data-setup'='{ "width": 500, "height": 400 }')
+                  source(src= filters.urlFor('/public/images/event/timelapse_moralzarzal_2019.mp4') , type= 'video/mp4')
+            .six.wide.column
+              include ../includes/layouts/includes/sidebar_events.pug
+
+    .ui.segment
+      .ui.basic.segment
+        +blogList(collections.blogEvents)
 

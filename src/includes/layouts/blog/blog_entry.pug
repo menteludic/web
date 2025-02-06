@@ -1,0 +1,16 @@
+extends ../full_page.pug
+
+block contents
+  #blog_entry
+    .ui.segment
+      .ui.header
+        .content
+          h1= title
+        .sub.header
+          != `Por <i>${author}</i>, ${filters.dateSort(date)}`
+      if image
+        .ui.content.center.aligned
+          img.ui.centered.image.rounded.title_image(src= `/public/images/blog/${filters.urlFor(image)}`, alt= title)
+
+      .ui.basic.segment
+        != content

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ROOT_FOLDER= node_modules/.bin/eleventy",
     "start": "ROOT_FOLDER= node_modules/.bin/eleventy --serve",
     "deploy": "node_modules/.bin/eleventy --quiet && node deploy.js",
     "debug": "DEBUG=Eleventy* node_modules/.bin/eleventy --serve"
@@ -19,5 +20,8 @@
     "ftp-deploy": "^2.4.7",
     "ramda": "^0.30.1",
     "sass": "^1.79.4"
+  },
+  "dependencies": {
+    "moment": "^2.30.1"
   }
 }

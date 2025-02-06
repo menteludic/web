@@ -1,9 +1,11 @@
 const R = require('ramda');
+const Moment = require('moment');
 const sass = require("sass");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 require('dotenv').config();
 
 module.exports = eleventyConfig => {
+  Moment.locale('es');
   eleventyConfig.setDataFileSuffixes([".11tydata", ""]);
   eleventyConfig.addTemplateFormats("scss");
 
@@ -26,6 +28,9 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy({ "src/assets/app.js": "/assets/app.js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/video-js/": "/assets/video-js/" });
   eleventyConfig.addPassthroughCopy({ "src/assets/unite-gallery/": "/assets/unite-gallery/" });
+  eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
+
+  const _sortBy = (field) => R.sortBy(R.view(R.lensPath(['data', field])))
 
   eleventyConfig.addCollection('rolLudotecaSorted', function(collectionApi) {
     return R.sortBy(R.compose(R.toLower, R.view(R.lensPath(['data', 'title']))), collectionApi.getFilteredByTag('rolLudoteca'));
@@ -33,6 +38,18 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('eventsSorted', function(collectionApi) {
     return R.sortBy(R.view(R.lensPath(['data', 'order'])))(collectionApi.getFilteredByTag('event'));
   });
+
+  const _blogPostsByTags = (tags) => (collectionApi) => {
+    const newTags = R.concat(['blog'], tags);
+    return R.compose(R.reverse, _sortBy('date'))(collectionApi.getFilteredByTags(...newTags));
+  };
+
+  eleventyConfig.addCollection('blogFrontpage', (collectionApi) => R.take(9, _blogPostsByTags(['frontpage'])(collectionApi)));
+  eleventyConfig.addCollection('blogBoardgames', _blogPostsByTags(['boardgames']));
+  eleventyConfig.addCollection('blogEvents', _blogPostsByTags(['events']));
+  eleventyConfig.addCollection('blogTTRpg', _blogPostsByTags(['ttrpg']));
+  eleventyConfig.addCollection('blogWargames', _blogPostsByTags(['wargames']));
+  eleventyConfig.addCollection('blogAbout', _blogPostsByTags(['about']));
 
   eleventyConfig.addPlugin(pluginNavigation);
 
@@ -42,6 +59,7 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addFilter("urlFor", (path) => `${process.env.ROOT_FOLDER}${path}`);
+  eleventyConfig.addFilter("dateSort", (date) => Moment(date).format('D [de] MMMM [de] YYYY'));
 
   // eleventyConfig.addCollection('col', (collection) => {
   //   console.log(collection);

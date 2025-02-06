@@ -3,10 +3,11 @@ title: Miniaturas
 ---
 
 extends ../includes/layouts/full_page.pug
+include ../includes/layouts/mixins/blogList.pug
 
 block contents
   #wargames
-    .ui.basic.segment
+    .ui.segment
       h1.header Wargames y Miniaturas
 
       p
@@ -15,5 +16,9 @@ block contents
 
       p Descubre el apasionante mundo de los wargames y las miniaturas en nuestra asociación. Aquí, tanto estrategas experimentados como principiantes pueden disfrutar de intensas batallas y desplegar sus tácticas en un entorno lleno de creatividad y precisión. Únete a nuestras sesiones, perfecciona tus habilidades de pintura de miniaturas y comparte con otros entusiastas.
 
-    .ui.basic.segment
-      img.ui.image.fluid.rounded(src= filters.urlFor("/public/images/miniaturas/portada.jpg"), alt="Asociación Portal Lúdico")
+      .ui.basic.segment
+        img.ui.image.fluid.rounded(src= filters.urlFor("/public/images/miniaturas/portada.jpg"), alt="Asociación Portal Lúdico")
+
+    .ui.segment
+      .ui.basic.segment
+        +blogList(collections.blogWargames)

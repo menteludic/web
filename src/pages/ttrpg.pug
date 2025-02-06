@@ -2,22 +2,27 @@
 title: Juegos de Rol
 ---
 extends ../includes/layouts/full_page.pug
+include ../includes/layouts/mixins/blogList.pug
 
 block contents
   #ttrpg
-    .ui.basic.segment
+    .ui.segment
       h1.header Juegos de Rol
 
       p
         | Nuestra
-        a(href= filters.urlFor('/pages/rol/ludoteca/'), title='Consulta la ludoteca de Rol de la Asociación')  biblioteca de rol
+        a(href= filters.urlFor('/pages/ttrpg/ludoteca/'), title='Consulta la ludoteca de Rol de la Asociación')  biblioteca de rol
         |  es muy grande, y se hace aún más grande cada día que pasa. Siempre hay varias campañas abiertas, pero hay espacio para one-shots.
         |
         | También hemos establecido el día de rol, una vez al mes, para encontrarnos, aprender los unos de los otros e introducir en el hobby a personas que quieran comenzar.
 
       p ¿Juegas?
 
-    .ui.basic.segment
-      i.play.icon
-      a.ui.header(href= filters.urlFor('/pages/rol/ludoteca/'))
-        | Consulta nuestra Ludoteca de rol
+      .ui.basic.segment
+        i.play.icon
+        a.ui.header(href= filters.urlFor('/pages/ttrpg/ludoteca/'))
+          | Consulta nuestra Ludoteca de rol
+
+    .ui.segment
+      .ui.basic.segment
+        +blogList(collections.blogTTRpg)

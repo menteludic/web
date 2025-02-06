@@ -1,16 +1,20 @@
 #footer
   .ui.inverted.vertical.footer.segment
     .ui.container
-      .ui.stackable.inverted.equal.height.stackable.grid
+      .ui.stackable.inverted.divided.equal.height.stackable.grid
         .three.wide.column
           img.ui.image.portalludico.logo_portalludico(src= filters.urlFor('/public/images/logos/portalludico_footer.png'), alt= 'Asociación Portal Lúdico')
-        .seven.wide.column
+        .three.wide.column
           h4.ui.inverted.header Síguenos
           .ui.inverted.link.list
             .item
               i.icon.twitter
               .content
                 a.item(href= siteInfo.contactLinks.twitter, target= '_blank')  Twitter
+            .item
+              i.icon.envelope
+              .content
+                a.item(href= siteInfo.contactLinks.bluesky, target= '_blank')  Bluesky
             .item
               i.icon.facebook
               .content
@@ -23,6 +27,18 @@
               i.icon.envelope
               .content
                 a.item(href= siteInfo.contactLinks.mail, target= '_blank')  Correo
-  .ui.inverted.vertical.segment
-    .ui.container.text
-      a(href= filters.urlFor('/pages/politica_privacidad/')) Aviso legal y política de privacidad
+        .seven.wide.column
+          h4.ui.inverted.header Más Información
+          .ui.inverted.link.list
+            .item
+              .content
+                a(href= 'https://portalludico.fillout.com/altas', target='_blank') Inscríbete
+            .item
+              .content
+                a(href= filters.urlFor('/pages/faq'), title= '¿Quieres saber más sobre nosotros?') Preguntas Frecuentes
+            .item
+              .content
+                a(href= filters.urlFor('/pages/calendar'), title= 'Calendario Actividades') Calendario
+            .item
+              .content
+                a(href= filters.urlFor('/pages/politica_privacidad/')) Aviso legal y política de privacidad

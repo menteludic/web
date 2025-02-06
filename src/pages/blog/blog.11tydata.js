@@ -3,4 +3,5 @@ module.exports = {
 		'blog',
 		'menteludic'
 	],
+	layout: "layouts/blog/blog_entry.pug"
 };

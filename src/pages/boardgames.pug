@@ -1,0 +1,25 @@
+---
+title: Juegos de Mesa
+---
+extends ../includes/layouts/full_page.pug
+include ../includes/layouts/mixins/blogList.pug
+
+block contents
+  #boardgames
+    .ui.segment
+      h1.header Juegos de Mesa
+      p
+        a(href= siteInfo.bggLocationSrc, target='_blank', title='Consulta la ludoteca de la Asociación en la BGG') Con una ludoteca de más de 500 juegos
+        |  y suficiente espacio en el local para más de 40 personas, jugamos desde juegos familiares a los euros más duros del mercado.
+      p También desde pequeños fillers a campañas de más de 50 horas (el que aguante).
+      p Los
+        b  Viernes del Socio
+        | , es cuándo más socios acudimos, pero en cualquier momento la asociación está abierta para que los socios jueguen a los juegos de la ludoteca o los que quieran traer de casa.
+
+      .ui.basic.segment
+        img.ui.image.fluid.rounded(src= filters.urlFor("/public/images/boardgames/portada.png"), alt="Asociación Portal Lúdico")
+
+    .ui.segment
+      .ui.basic.segment
+        +blogList(collections.blogBoardgames)
+
