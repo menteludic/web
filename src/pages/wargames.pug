@@ -19,6 +19,8 @@ block contents
       .ui.basic.segment
         img.ui.image.fluid.rounded(src= filters.urlFor("/public/images/miniaturas/portada.jpg"), alt="Asociación Portal Lúdico")
 
-    .ui.segment
-      .ui.basic.segment
-        +blogList(collections.blogWargames)
+    if collections.blogWargames.length
+      .ui.segment
+        .ui.basic.segment
+          h1.ui.dividing.header Últimas Noticias
+          +blogList(collections.blogWargames)

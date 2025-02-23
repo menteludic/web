@@ -7,7 +7,7 @@ include ../includes/layouts/mixins/blogList.pug
 block contents
   #ttrpg
     .ui.segment
-      h1.header Juegos de Rol
+      h1.ui.dividing.header Juegos de Rol
 
       p
         | Nuestra
@@ -23,6 +23,8 @@ block contents
         a.ui.header(href= filters.urlFor('/pages/ttrpg/ludoteca/'))
           | Consulta nuestra Ludoteca de rol
 
-    .ui.segment
-      .ui.basic.segment
-        +blogList(collections.blogTTRpg)
+    if collections.blogTTRpg.length
+      .ui.segment
+        .ui.basic.segment
+          h1.ui.dividing.header Últimas Noticias
+          +blogList(collections.blogTTRpg)

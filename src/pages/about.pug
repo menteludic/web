@@ -1,7 +1,7 @@
 ---
 title: Acerca de...
 ---
-extends ../includes/layouts/full_page.pug
+extends ../includes/layouts/side_bar.pug
 include ../includes/layouts/mixins/blogList.pug
 
 block contents
@@ -15,31 +15,251 @@ block contents
         p El principal objetivo de la Asociación es fomentar la utilización de juegos de mesa y rol, en todas sus variantes, como alternativa de ocio en España, así como dar a conocer sus ventajas educativas, culturales y lúdicas entre los miembros de la asociación o personas ajenas a ésta. Para ello colaboramos con diversas entidades públicas y privadas para fomentar este sano modo ocio.
         p Si quieres conocer lo que hacemos, te invitamos a que pases por nuestra sede y nos conozcas. Si tu pasión son los juegos de mesa, rol, miniaturas y wargames... ¡Este es tu espacio!
 
-      .ui.basic.segment
-        img.ui.right.medium.floated.image(src= filters.urlFor('/public/images/asociacion/casa_rural.jpg'))
+      .ui.accordion
+        h2.title
+          i.dropdown.icon
+          | Cómo nos Organizamos
 
-        h3 Otras Actividades
-        p Cada año organizamos dos casas rurales (una en verano y otra en invierno donde podemos desplegar sin limitación horaria nuestras aficiones. En las de verano (con más de 50 personas) también acuden familia y amigos si lo desean.
-        p También se ha abierto un club de lectura de comics, hacemos quedadas para ir al cine o nos aconsejamos sobre el mejor fontanero de la zona o novedades en videojuegos.
+        .content
+          .ui.basic.container.segment.block.clear
+            h3 Organización formal
 
-      .ui.basic.segment
-        .ui.red.basic.big.button
-          a(href= filters.urlFor('/pages/faq'), title= '¿Quieres saber más sobre nosotros?')
-            i.question.circle.outline.icon
-            | Preguntas Frecuentes
+            p Como asociación, tenemos la estructura formal legal de una asociación, con la asamblea de socios como órgano soberano democrático de la asociación. La asociación es de cada uno de sus socios.
 
-      .ui.basic.segment
-        h3 Política de privacidad
-        | Puedes consultar nuestra política de privacidad
-        a(href= filters.urlFor('/pages/politica_privacidad'))
-          |  aquí
+            p La Junta directiva es el órgano de gestión formal de la asociación. Actualmente la junta directiva se compone de:
+            .ui.bulleted.list
+              .item Presidente - Israel Díaz González
+              .item Vicepresidente – Daniel frías
+              .item Secretario – Juanmi Céspedes
+              .item Tesorero – Manuel Martínez
+              .item Vocal de juegos de mesa – Pablo Fuentes
+              .item Vocal de rol – Roberto M. Oliva
 
-      .ui.basic.segment
-        #donde_estamos
-          h3 Aquí estamos
-          p
-            iframe(allowfullscreen= '', frameborder= "0", height= "450", src= siteInfo.googleLocationSrc, width= "600")
+            h3 El día a día
+
+            p Si bien esta es la organización más formal y oficial, intentamos que el día a día de la asociación sean los socios los que participen de la manera que consideren y puedan aportar en beneficio de la comunidad.
+
+            p Grupos de trabajo activos:
+
+            .ui.bulleted.list
+              .item Eventos: Con las que liamos (con algunos eventos con más de 1000 asistentes en tres días), necesitamos estar bien coordinados.
+              .item Web y newsletter. Dónde intentamos conectar tanto con los socios como con personas que acuden a nuestros eventos y tener el mejor escaparate ante cualquier persona u organización interesada en nosotros.
+              .item Cantina y orden en la asociación: Somos muchos socios, y necesitamos organizar la logistica.
+              .item Gestión de la ludoteca: Con más de 500 juegos enfocados a todo tipo de enfoque del hobby.
+              .item Gestión de casas rurales: para coordinar las escapadas lúdicas que hacemos dos veces al año.
+
+            p Más allá de esto, hay personas concretas encargadas de temas concretos:
+
+            .ui.bulleted.list
+              .item Redes sociales: Sergio
+              .item La colaboración y los acuerdos con tiendas (que siempre está bien conseguir descuentos :D), gestionado por Jorge
+              .item Acogida de socios, para que quien entre, no lo haga con un aterrizaje forzoso, y gestionada por Pablo
+
+            h3 ¿Cómo nos comunicamos?
+
+            p Para el día a día, nos comunicamos por dos grupos de Telegram.
+
+            p Uno, el más formal, dedicado a las comunicaciones más orientadas a nuestro hobby y la gestión de la asociación: juegos de mesa, rol, wargames, anuncios oficiales, eventos…
+
+            p En el segundo, de #offtopics, abrimos las conversaciones a temáticas más variadas: talleres de pintura, cómics, videojuegos, quedadas para escape rooms, o lo que se tercie.
+
+        h2.title
+          i.dropdown.icon
+          | El Local
+
+        .content
+          .ui.basic.container.segment.block.clear
+            p Disponemos de un local climatizado en la
+              a(href= siteInfo.googleLocationSrc)
+                |  C/Puerta de abajo 49, de Alpedrete,
+              |  de más de 100m2 con un aforo de hasta 50 personas sentadas. Cuenta con un aseo completo, sistema de acceso digital remoto, y seguridad por videovigilancia.
+
+            p
+              | La mayor parte del local la ocupa
+              b la zona de juego
+              | (como no podía ser menos). Con 8 mesas “estables” y posibilidad de ampliarlas si es necesario, este espacio se configura como un espacio dinámico en el que tanto se pueden jugar las partidas del día a día, como combinarse o distribuirse para partidas grandes o incluso torneos de wargames.
+
+            img.ui.image.medium.rounded.floated.left(src= filters.urlFor("/public/images/blog/about/local2.jpg") alt="Foto General del Local de la Asociación" title="Foto General del Local de la Asociación")
+
+            p Además disponemos de una mesa para juegos iluminada para que quien lo desee pueda tener una experiencia de juego aún más gratificante
+
+            p Buena parte del local lo ocupa
+              a(href= "https://boardgamegeek.com/collection/user/Portalludico")
+                |  una ludoteca de más de 500 referencias
+              |. Desde juegos para los más
+              b  peques
+              |  a euros duros, pasando por juegos familiares, wargames...
+
+        h2.title
+          i.dropdown.icon
+          | Otras Actvidades
+
+        .content
+          .ui.basic.container.segment.block.clear
+            img.ui.image.rounded(src= filters.urlFor('/public/images/asociacion/casa_rural_all.jpg'))
+
+            p Cada año organizamos dos casas rurales (una en verano y otra en invierno donde podemos desplegar sin limitación horaria nuestras aficiones. En las de verano (con más de 50 personas) también acuden familia y amigos si lo desean.
+            p También se ha abierto un club de lectura de comics, hacemos quedadas para ir al cine o nos aconsejamos sobre el mejor fontanero de la zona o novedades en videojuegos.
 
     .ui.segment
-      .ui.basic.segment
-        +blogList(collections.blogAbout)
+      h1 Preguntas Frecuentes
+      .ui.content
+        .ui.accordion
+          h2.title
+            i.dropdown.icon
+            | ¿Qué hacemos?
+          .content
+            p Portal Lúdico es un espacio para quienes disfrutan de los juegos de mesa, wargames y rol, sin importar su nivel de experiencia. Aquí puedes conocer a personas con tus mismos intereses, aprender juegos nuevos y disfrutar de nuestra amplia ludoteca.
+            p También contamos con una sala de juegos y un grupo de Telegram para que los socios puedan comunicarse, organizar partidas y charlar.
+            p Organizamos eventos para promover el hobby entre quienes aún no lo conocen, colaborando con entidades públicas y privadas, y puertas adentro realizamos actividades para socios, como encuentros en casas rurales, talleres de pintura y quedadas.
+          h2.title
+            i.dropdown.icon
+            | ¿Dónde estamos?
+          .content
+            p Nuestro punto de encuentro es
+              a(href= filters.urlFor('/pages/about/#donde_estamos'))  nuestra sede en Alpedrete.
+              |  En nuestro local es donde tenemos la ludoteca, y suficientes mesas para tener muchas partidas en marcha al mismo tiempo.
+            p Casi cualquier día se puede encontrar a alguno de nuestros jugones en su hábitat natural, pastando alrededor de una mesa, pero los viernes por la tarde tenemos el Día del Socio, y cuándo más partidas, organizadas o espontáneas, se pueden encontrar.
+          h2.title
+            i.dropdown.icon
+            | ¿Puedo ir a probar?
+          .content
+            p ¡Claro! Si quieres venir a ver cómo funciona la asociación en persona, pásate un viernes por la tarde y puedes conocernos a los que estemos por ahí, y echar alguna partida en alguna mesa que haya un hueco.
+            p Si no conoces a nadie de la asociación aún, mejor avisa que pasarás. Manda un correo a
+              a(href= 'visitas@menteludic.com')  visitas@menteludic.com
+              |  y cuéntanos cuándo pasarás (¡así alguien sabe que vienen a conocernos, y estamos atentos a la puerta!)
+          h2.title
+            i.dropdown.icon
+            | ¿Cómo me apunto? ¿Cuánto cuesta y cómo se paga?
+          .content
+            p
+              | Muy fácil. Solo tienes que rellenar
+              a(href= 'https://portalludico.fillout.com/altas', target= '_blank')  este formulario
+              |  para darte de alta.
+            p En el formulario te pediremos:
+            .ui.bulleted.list
+              .item tus datos personales
+              .item que aceptes la política de privacidad y de tratamiento de datos personales
+              .item y tendrás que enviar el justificante de pago de la cuota de la asociación.
+            p Si te estás apuntando por primera vez, puedes probar la asociación por 3 meses por 15 €. Si no, los precios son los siguientes:
+            .ui.bulleted.list
+              .item 3 meses: 45 €
+              .item 6 meses: 60 €
+              .item 1 año: 120 € (90 € desde el segundo año)
+          h2.title
+            i.dropdown.icon
+            | ¿Puedo llevar invitados?
+          .content
+            p Los socios tienen derecho a llevar 6 invitados por año sin coste. A partir del séptimo, hay que pagar 5€ por invitado.
+
+            .ui.bulleted.list
+              .item Si vas a llevar a un invitado, simplemente menciónalo en el grupo de Telegram, en el canal
+                b  Portal Lúdico – Chat General.
+                |  ¡Nos gusta saber cuando vienen visitas!
+              .item Eres responsable por el comportamiento de los invitados que lleves.
+              .item Los invitados solo pueden permanecer en la tienda mientras tú estés.
+          h2.title
+            i.dropdown.icon
+            | ¿Pueden ir niños?
+          .content
+            p Los socios tienen que tener como mínimo 16 años. Pero si tienes hijos/as, puedes traerlos y sin que tengan que asociarse.
+            p Solo pueden quedarse mientras tú estás en la tienda, para hacerte cargo. Y los juegos de mesa pueden pedir bastante concentración, así que por favor: diles que se lo tomen con calma. 😉
+            p Hay otros jugones con hijos e hijas, y muchas veces se coordinan para que vengan a la vez, y que puedan encontrarse con otros de gustos parecidos.
+          h2.title
+            i.dropdown.icon
+            | ¿Además de partidas en la asociación, que otras actividades regulares existen?
+          .content
+            p La asociación colabora con una serie de eventos organizados por ayuntamientos de la zona, como
+              a(href= filters.urlFor('/pages/events'))  Menteludic
+            p En estos eventos participamos llevando juegos de nuestra ludoteca, y organizando partidas y enseñando juegos a gente que quiera acercarse al hobby.
+            p Participamos en estos eventos para promocionar el hobby (y conseguir más jugones), y también para conseguir financiación para la asociación.
+            p Cuando estos eventos se ponen en marcha, usamos el canal “Eventos” dentro del grupo de Telegram, para que los socios que quieran y puedan colaborar puedan coordinarse.
+            p Además de esto, intentamos irnos a pasar un fin de semana juntos a una casa rural dos veces por año, una en verano y otra en invierno. Nos juntamos entre 20 a ¡50! jugones a pasar un fin de semana jugando y pasándolo bien en grupo.
+          h2.title
+            i.dropdown.icon
+            | ¿Puedo apuntarme a una partida aunque no sepa jugar?
+          .content
+            p Casi siempre:
+              b  sí.
+            p La asociación está llena de gente que no tiene problema en enseñar juegos cuando haga falta. En alguna ocasión alguien pedirá jugadores experimentados, para empezar a jugar antes. En caso de duda, pregunta.
+            p Aunque no haya problema en explicar, se agradece mucho cuando los que no conocen el juego dedican un poco de tiempo a aprender antes de llegar a la partida. Casi siempre, si buscas “Como jugar a CualquierJuego”, vas a encontrar muchos tutoriales en YouTube. Verse uno (o dos), acelera mucho la explicación.
+            p Y si no tienes ni idea de qué va el juego, es muy recomendable investigar un poco antes de apuntarte a ciegas. Hay un juego para todos, pero no todos los juegos son para uno. La web de referencia para buscar información de un juego es “Board Game Geek“. Si buscas un juego ahí, puedes encontrar algunos parámetros que te pueden indicar si ese juego es lo que estás buscando:
+            img.ui.image.fluid.rounded(src= filters.urlFor('/public/images/faq/image-1024x282.png'))
+            p
+            p “Weight” (peso), indica la “complejidad” de un juego, del 1 al 5. Los juegos por encima de 3 se pueden llegar a hacer durillos si no son tu estilo y no tienes experiencia, así que apúntate a sabiendas de lo que te puedes encontrar (así tú y todos se lo pasan bien).
+            p Y “Playing Time” (duración), te va a dar una idea si vas a una experiencia corta, o si se alargará hasta la noche. (Ten en cuenta que estos tiempos son estimados, y que es muy fácil y habitual que las partidas duren bastante más que lo que pone aquí).
+          h2.title
+            i.dropdown.icon
+            | ¿Qué juegos hay en la ludoteca y como puedo usarlos?
+          .content
+            p En la ludoteca de la asociación hay más de 500 juegos que todos los socios podemos usar. Puedes encontrar la lista completa
+              a(href= 'https://geekgroup.app/users/portalludico/collection', target= '_blank')
+                |  aquí
+            p Las reglas son sencillas:
+            .ui.bulleted.list
+              .item
+                | Los juegos
+                b  no pueden salir de la asociación
+                |  (a menos que sea para un evento organizado por la asociación)
+              .item Los juegos son de todos, y cuánto más se cuiden, más duran. Hay que tratarlos con atención y cariño, particularmente si se come o bebe en la mesa. Las bebidas no se apoyan en la mesa, no comas cosas que manchen al mismo tiempo que juegas.
+              .item Al terminar, guarda el juego con cuidado en el sitio que lo encontraste.
+              .item Si al jugar notas que falta algún componente o que hay algo roto, avisa en el grupo de Telegram, así podemos saber qué se puede hacer por arreglarlo.
+              .item Todos nuestros juegos con cartas tienen que estar enfundados. Si te encuentras con un juego con cartas sin enfundar, en lo posible, habla con algún socio más veterano para resolverlo (hay que buscar en las fundas existentes para ver si nos quedan, y si no habrá que pedirlas).
+          h2.title
+            i.dropdown.icon
+            | ¿Cómo funciona el acceso a la sede? ¿Puedo tener mi propia llave?
+          .content
+            p Desde hace poco, tenemos un local propio. Estamos terminando de implementar un sistema de acceso informatizado que permite a los socios entrar sin necesitar una llave física.
+            p Las condiciones para obtener este acceso a la sede son muy sencillas:
+            .ui.bulleted.list
+              .item Ser un socio veterano (tener más de un año de antigüedad)
+            p O, alternativamente:
+            .ui.bulleted.list
+              .item Tener más de 3 meses de antigüedad con nosotros,
+              .item Y estar al día con la cuota anual.
+            p Si aún no cumples con los requisitos de arriba, suele ser muy fácil usar el grupo de Telegram para coordinarte con algún otro socio que vaya cuando quieres ir tú, y pueda abrirte.
+            p Independientemente de las reglas de arriba, el acceso libre a la sede
+              b  es un privilegio que la junta directiva puede habilitar o restringir en casos puntuales;
+              |  en casos en que se considere necesario por necesidades excepcionales o motivos de convivencia.
+
+    if collections.blogAbout.length
+      .ui.segment
+        .ui.basic.segment
+          +blogList(collections.blogAbout)
+
+block side_bar
+  #donde_estamos
+    .ui.segment
+      h3.header Aquí estamos
+      p
+        = "C/Puerta de abajo 49"
+        br
+        = "Alpedrete"
+      p
+        iframe(allowfullscreen= '', frameborder= "0", height= "250", src= siteInfo.googleLocationSrc, width= "200")
+    .ui.segment
+      h3.header Para Contactar con Nosotros
+      .ui.link.list.center.aligned
+        .item
+          i.icon.twitter
+          .content
+            a.item(href= siteInfo.contactLinks.twitter, target= '_blank')  Twitter
+        .item
+          i.icon.facebook
+          .content
+            a.item(href= siteInfo.contactLinks.facebook, target= '_blank')  Facebook
+        .item
+          i.icon.instagram
+          .content
+            a.item(href= siteInfo.contactLinks.instagram, target= '_blank')  Instagram
+        .item
+          i.icon.calendar
+          .content
+            a.item(href= siteInfo.contactLinks.meetup, target= '_blank')  Meetup
+        .item
+          i.icon.envelope
+          .content
+            a.item(href= siteInfo.contactLinks.mail, target= '_blank')  Correo
+
+
+

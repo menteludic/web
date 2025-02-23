@@ -6,34 +6,59 @@ include includes/layouts/mixins/blogList.pug
 
 block contents
   #index
-    .ui.basic.padded.segment
-      img.image.ui.big.rounded(src= filters.urlFor('/public/images/index/group.jpg'), alt='Asociación Portal Lúdico')
-    .ui.basic.padded.segment
+    .ui.carousel.fluid.container
+      .carousel-inner
+          .carousel-item
+            img(src= filters.urlFor('/public/images/index/carrousel/4.jpg'), alt='Asociación Portal Lúdico')
+          .carousel-item
+            img(src= filters.urlFor('/public/images/index/carrousel/1.jpg'), alt='Asociación Portal Lúdico')
+          .carousel-item
+            img(src= filters.urlFor('/public/images/index/carrousel/2.jpg'), alt='Asociación Portal Lúdico')
+          .carousel-item
+            img(src= filters.urlFor('/public/images/index/carrousel/3.jpg'), alt='Asociación Portal Lúdico')
+      .carousel-controls
+        span.prev
+        span.next
+      .carousel-indicators
+
+    .ui.basic.segment
       .header
-        h1 Bienvenido a nuestra web
-      .content
-        p
-          .text Somos una asociación de la sierra de Madrid que desde 2017 disfrutamos y hacemos disfrutar de un ocio sano y enriquecedor.
-          .text A lo largo de estos años hemos creado una comunidad en la que todos y todas somos bienvenidos, así que no dudes en explorar esta web, conocernos y ponerte en contacto con nosotros.
-          .text Actualmente con más de 90 socios y socias, y un local propio, realizamos multitud de actividades dirigidas tanto a socios como a quien nos lo solicite.
+        h1.ui.dividing.header Bienvenido a nuestra web
 
-    .ui.basic.padded.segment
-      .ui.accordion
-        each item in collections.frontpageSection
-          .ui.segment(class= item.data.color)
-            .title
-              .ui.header
-                i(class= `inverted ${item.data.color} circular ${item.data.icon} icon`)
-                .content= item.data.title
-            .content
-              .ui.container.segment.block.clear
-                != item.content
-                a.ui.basic.button.right.floated(href= filters.urlFor(item.data.url))
-                  | Más información
-                  i.right.arrow.icon
-                div(style= 'clear: both')
+      .ui.stackable.grid.container
+        .row
+          .eleven.wide.column
+            .ui.basic.segment
+              .content
+                p Somos una asociación de la sierra de Madrid que desde 2017 disfrutamos y hacemos disfrutar de un ocio sano y enriquecedor.
+                p A lo largo de estos años hemos creado una comunidad en la que todos y todas somos bienvenidos, así que no dudes en explorar esta web, conocernos y ponerte en contacto con nosotros.
+                p Actualmente con más de 90 socios y socias, y un local propio, realizamos multitud de actividades dirigidas tanto a socios como a quien nos lo solicite.
 
-      .ui.segment
+            .ui.basic.segment
+              .content
+                p Si quieres conocer lo que hacemos haz click en cada actividad:
+
+            .ui.basic.segment
+              .ui.accordion
+                each item in collections.frontpageSection
+                  .ui.segment(class= item.data.color)
+                    .title
+                      .ui.header
+                        i(class= `inverted ${item.data.color} circular ${item.data.icon} icon`)
+                        .content= item.data.title
+                    .content
+                      .ui.container.segment.block.clear
+                        != item.content
+                        a.ui.basic.button.right.floated(href= filters.urlFor(item.data.url))
+                          | Más información
+                          i.right.arrow.icon
+                        div(style= 'clear: both')
+          .four.wide.column
+            iframe(src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FMadrid&showPrint=0&src=NWNlMDNjODRiOTQyNjdjMmQyOTI4NDIwMGY3ZTZhYjk1YzRiOWIxMzU2ODUwZTY0YTExOTQ0ZTlhOGVlZDZmYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aGl2YWg0Y3F0YjB0N2F0bXZhb3A4cTFrYTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZmFtaWx5MDYwNzgwMTM2ODk5OTkwOTc3MDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=NDkwZTA3YzM1YTdjMWY3ZTEzZDBiNzYzNmJiODEzNGVjNzNkNjM4YTU5Nzk5MzNkNmViMzk1NWIwMmZhMmRhNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23B39DDB&color=%23E67C73&color=%23E4C441&color=%23EF6C00&color=%23009688&color=%237986CB&mode=agenda" style="border:solid 1px #777" height="400" frameborder="0" scrolling="no")
+            iframe(width="320" height="460" src="https://www.instagram.com/menteludic/embed" frameborder="0")
+
+    if collections.blogFrontpage.length
+      .ui.basic.segment
+        h1.ui.dividing.header Últimas Noticias
         +blogList(collections.blogFrontpage)
-
 

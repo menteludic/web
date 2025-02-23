@@ -13,12 +13,12 @@ $(document).ready(function() {
   // create sidebar and attach to menu open
   $('.ui.sidebar').sidebar('attach events', '.toc.item');
   $('.dropdown').dropdown();
-  $('#faq .ui.accordion').accordion();
   $('#index .ui.accordion').accordion({
     selector: {
       trigger: '.title'
     }
   });
+  $('#about .ui.accordion').accordion();
   $('.ui.tabular.menu .item').tab();
   $('.unite-gallery').unitegallery({
     lightbox_type: 'compact'

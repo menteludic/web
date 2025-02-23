@@ -28,6 +28,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy({ "src/assets/app.js": "/assets/app.js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/video-js/": "/assets/video-js/" });
   eleventyConfig.addPassthroughCopy({ "src/assets/unite-gallery/": "/assets/unite-gallery/" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/carrousel/": "/assets/carrousel/" });
   eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
 
   const _sortBy = (field) => R.sortBy(R.view(R.lensPath(['data', field])))

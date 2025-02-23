@@ -1,12 +1,14 @@
 mixin blogList(blogList)
-  .ui.link.cards
-    each item in blogList
-      .card
-        if item.data.image
-          .image
-            img(src= filters.urlFor(`/public/images/blog/${item.data.image}`))
-        .content
-          .header
-            a(href= filters.urlFor(item.url))= item.data.title
-          .extra
-            = filters.dateSort(item.data.date)
+  .blog-list
+    .ui.link.cards
+      each item in blogList
+        .card
+          if item.data.image
+            .image
+              .crop
+                img(src= filters.urlFor(`/public/images/blog/${item.data.image}`))
+          .content
+            .header
+              a(href= filters.urlFor(item.url))= item.data.title
+            .extra
+              = filters.dateSort(item.data.date)

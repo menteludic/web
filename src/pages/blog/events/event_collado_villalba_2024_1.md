@@ -6,10 +6,20 @@ tags:
 # - ttrpg
 # - wargames
 # - about
-title: 'Evento Collado Villalba - 21 de Diciembre'
-image: 'events/event_collado_villalba_2024_1.jpg'
+title: 'Ocio en Familia 2025 - Collado Villalba'
+image: 'events/event_collado_villalba_2025_0.jpg'
 date: 2025-02-01
 author: 'Menteludic'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus arcu, faucibus eget faucibus ac, accumsan sed mauris. Donec id lacus metus. Morbi ultricies lacus non eros finibus, at interdum nibh egestas. Nunc iaculis varius arcu, in volutpat arcu. Sed aliquet luctus eros vitae lacinia. Vestibulum porttitor suscipit purus tristique scelerisque. Phasellus ipsum magna, bibendum nec eleifend sit amet, pharetra non mi. Etiam eu semper risus, eget posuere turpis. Vestibulum sed nisi venenatis, blandit sem vulputate, tristique orci. Vivamus non pellentesque enim, et ullamcorper ligula. Vivamus tincidunt libero nec molestie vulputate. Praesent tortor enim, auctor eu ante ac, hendrerit porta nisi. Nam tincidunt sagittis sagittis. Duis id mi ut libero eleifend rhoncus.
+### Próximos eventos de Ocio en Familia
+
+Salón el Capricho
+
+- 26 de Enero de 2025
+- 23 de Febrero de 2025
+- 6 de Abril de 2025
+- 25 de Mayo de 2025
+- 21 de Septiembre de 2025
+- 19 de Octubre de 2025
+- 23 de Noviembre de 2025

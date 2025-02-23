@@ -14,7 +14,6 @@ $color-ttrpg: $color-menteludic2;
 $color-wargames: $color-menteludic3;
 $color-events: $color-menteludic4;
 $color-about: $color-menteludic5;
-$color-faq: $color-menteludic5;
 $color-about: $color-menteludic6;
 $color-contact: $color-menteludic7;
 $color-calendar: $color-menteludic8;
@@ -75,6 +74,20 @@ body {
   display: none;
 }
 
+.blog-list {
+  .crop {
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+  }
+
+  .crop img {
+      width: 400px;
+      height: 300px;
+      margin: -75px 0 0 -100px;
+  }
+}
+
 #boardgames{
   .ui.segment:not(.basic){
     border-top: 2px solid $color-boardgames !important;
@@ -107,25 +120,9 @@ body {
   }
 }
 
-#about{
+#about, #donde_estamos {
   .ui.segment:not(.basic){
     border-top: 2px solid $color-about !important;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-}
-
-#contact{
-  .ui.segment:not(.basic){
-    border-top: 2px solid $color-contact !important;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-}
-
-#faq{
-  .ui.segment:not(.basic){
-    border-top: 2px solid $color-faq !important;
     margin-top: 1em;
     margin-bottom: 1em;
   }
