@@ -14,7 +14,8 @@ author: 'Menteludic'
 
 En colaboración con la consejería de Educación del Ayuntamiento de Collado Villalba dentro del programa "Ocio en Familia" y la Policía Local organizamos el Evento: Menteludic Ocio en Familia en <a href="https://maps.app.goo.gl/1q49ZneejoVfuvwR8" target="_blank">La Carpa de la Malvaloca</a> en La Calle Batalla de Bailén 8, Collado Villalba.
 
-Como siempre podremos disfrutar de diferentes actividades dentro del amplio espacio dipsonible:
+Como siempre, podremos disfrutar de diferentes actividades dentro del amplio espacio disponible:
+
 - Ludoteca
 - Demostraciones de Juegos de Mesa
 - Talleres
@@ -24,5 +25,5 @@ Como siempre podremos disfrutar de diferentes actividades dentro del amplio espa
 - Batallas de miniaturas
 - Y mucho más...
 
-El acceso es gratuito. Te esperamos!!
+El acceso es gratuito. ¡Te esperamos!
 
