@@ -42,7 +42,7 @@ Cada sello equivale a una papeleta para el sorteo de ese viernes.
 * Los viernes 3 y 10 habrá premios y regalos sorpresa.
 * El viernes 17 todos los sellos acumulados contarán para el gran sorteo final, cuyo premio estrella será Los Druidas de Edora, la novedad de Alea (Ravensburger) de este mes.
 
-<img src="../../public/images/blog/events/oktoberfeld_tote_bags.webp" alt="Pasaporte Oktoberfeld" style="width: 100%;>
+<img src="../../public/images/blog/events/oktoberfeld_tote_bags.webp" alt="Pasaporte Oktoberfeld" style="width: 100%;">
 
 ## Torneo de Los Castillos de Borgoña
 Tendremos un **Gran Torneo Borgoña**, donde competiremos jugando con la _Edición Especial_ de _Los Castillos de Borgoña_, incluyendo la expansión de los Viñedos.
