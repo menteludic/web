@@ -1,0 +1,26 @@
+{
+  "frontpage": {
+    "title": "Portada",
+    "url": "/"
+  },
+  "about": {
+    "title": "La Asociación",
+    "url": "/pages/about/"
+  },
+  "events": {
+    "title": "Eventos Menteludic",
+    "url": "/pages/events/"
+  },
+  "boardgames": {
+    "title": "Juegos de Mesa",
+    "url": "/pages/boardgames/"
+  },
+  "ttrpg": {
+    "title": "Juegos de Rol",
+    "url": "/pages/ttrpg/"
+  },
+  "wargames": {
+    "title": "Wargames y Miniaturas",
+    "url": "/pages/wargames/"
+  }
+}

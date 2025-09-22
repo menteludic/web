@@ -19,6 +19,30 @@ block contents
       .ui.basic.segment
         img.ui.image.fluid.rounded(src= filters.urlFor("/public/images/boardgames/portada.png"), alt="Asociación Portal Lúdico")
 
+      .ui.basic.segment
+        h1.ui.dividing.header Información básica para disfrutar de los juegos de mesa:
+
+        .ui.bulleted.list
+          .item
+            .header
+              a(href= filters.urlFor("/blog/clasificacion-de-juegos-de-mesa/"), alt="Tipos de Juegos de mesa") Tipos de Juegos de mesa
+          .item
+            .header
+              a(href= filters.urlFor("/blog/mecanicas-de-los-juegos-de-mesa/"), alt="Mecánicas de Juegos de Mesa") Mecánicas de Juegos de Mesa
+          .item
+            .header
+              a(href= filters.urlFor("/blog/juegos-de-mesa-de-entrada/"), alt="Juegos de mesa de entrada") Juegos de mesa de entrada
+          .item
+            .header
+              a(href= filters.urlFor("/blog/party-games/"), alt="Juegos Party") Juegos Party
+          .item
+            .header
+              a(href= filters.urlFor("/blog/juegos-tematicos/"), alt="Juegos Temáticos") Juegos Temáticos
+          .item
+            .header
+              a(href= filters.urlFor("/blog/eurogames/"), alt="Eurogames") Eurogames
+
+
     if collections.blogBoardgames.length
       .ui.segment
         .ui.basic.segment

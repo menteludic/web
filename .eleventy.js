@@ -61,6 +61,13 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addFilter("urlFor", (path) => `${process.env.ROOT_FOLDER}${path}`);
   eleventyConfig.addFilter("dateSort", (date) => Moment(date).format('D [de] MMMM [de] YYYY'));
+  eleventyConfig.addFilter("blogLinks", (tags, links) => {
+    return R.compose(R.join(', '), R.reject(R.isNil), R.map((tag) => {
+      if(Object.keys(links).includes(tag)) {
+        return `<a href=${filters.urlFor(links[tag].url)}>${links[tag].title}</a>`
+      }
+    }))(tags)
+  });
 
   // eleventyConfig.addCollection('col', (collection) => {
   //   console.log(collection);

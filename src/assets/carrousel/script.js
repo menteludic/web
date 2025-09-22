@@ -12,7 +12,7 @@ jQuery(function () {
     let activeIndicator = 0;
     let direction = -1;
     let jump = 1;
-    let interval = 2000;
+    let interval = 10000;
     let time;
 
     //Init carousel

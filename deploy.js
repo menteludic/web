@@ -18,6 +18,7 @@ const config = {
         "dist/**/*.map",
         "node_modules/**",
         "node_modules/**/.*",
+        "src/public/**/*",
         ".git/**",
         ".env"
     ],

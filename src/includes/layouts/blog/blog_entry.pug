@@ -3,11 +3,16 @@ extends ../full_page.pug
 block contents
   #blog_entry
     .ui.segment
+      .ui.blue.ribbon.label
+        i.tags.icon
+        != filters.blogLinks(tags, blogLinks)
       .ui.header
         .content
           h1= title
-        .sub.header
-          != `Por <i>${author}</i>, ${filters.dateSort(date)}`
+        .sub.header!= `Por <i>${author}</i>, ${filters.dateSort(date)}`
+
+      .ui.divider
+
       if image
         .ui.content.center.aligned
           img.ui.centered.image.rounded.title_image(src= filters.urlFor(`/public/images/blog/${image}`), alt= title)

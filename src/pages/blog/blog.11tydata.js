@@ -3,5 +3,6 @@ module.exports = {
 		'blog',
 		'menteludic'
 	],
-	layout: "layouts/blog/blog_entry.pug"
+	layout: "layouts/blog/blog_entry.pug",
+	permalink: "blog/{{ title | slugify }}/index.html"
 };

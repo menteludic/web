@@ -1,18 +1,18 @@
 ---
 tags:
-#- frontpage
+- frontpage
 #- about
 #- events
 #- boardgames
-#- ttrpg
+- ttrpg
 # - wargames
-title: 'Día del Rol - 2 de Marzo de 2025'
-image: 'ttrpg/dia_rol_2025_3.jpg'
-date: 2025-02-23
+title: 'Día del Rol - 6 de Abril de 2025'
+image: 'ttrpg/dia_rol_2025_4.jpg'
+date: 2025-03-17
 author: 'José Luis Latasa'
 ---
 
-Segundo día del rol en la asociación! Se va a celebrar el 2 de Marzo de 2025. Es una jornada diseñada para promocionar los juegos de rol dentro de la asociación y especialmente para si alguien quiere iniciarse en este apasionante mundo pueda jugar.
+Tercer día del rol en la asociación! Se va a celebrar el 6 de Abril de 2025. Es una jornada diseñada para promocionar los juegos de rol dentro de la asociación y especialmente para si alguien quiere iniciarse en este apasionante mundo pueda jugar.
 
 Las partidas están orientadas a sistemas sencillos, con partidas cortas e introductorias. No hace falta conocer ningún lore antiguo, ni tener ningún extraño conocimiento arcano para participar, (aunque la organización no se hace responsable de los que puedas adquirir después de tu extraordinaria interpretación de la invocación a Yog Sothoth). Lo único que necesitas son tener ganas de pasarlo bien y disfrutar
 
