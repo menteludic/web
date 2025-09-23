@@ -21,7 +21,7 @@ Durante los tres primeros viernes del mes _(3, 10 y 17 de octubre, a partir de l
 
 ¡Todo el mundo! La entrada es gratuita y durante Oktoberfeld abrimos las puertas de la asociación para todo el mundo.
 
-Si aún no eres socio y quieres participar, escríbenos a [info@menteludic.com](mailto:info@menteludic.com) para avisarnos que quieres venir: será es una gran ocasión para conocer nuestra sede y el ambiente de nuestra asociación.
+Si aún no eres socio y quieres participar, escríbenos a [info@menteludic.com](mailto:info@menteludic.com) para avisarnos que quieres venir: será una gran ocasión para conocer nuestra sede y el ambiente de nuestra asociación.
 
 ## Pasaporte Feld y sorteos
 
@@ -35,12 +35,12 @@ En él podrás conseguir sellos al cumplir distintos logros. Por ejemplo:
 * Probar un Feld nuevo
 * Enseñar un Feld a alguien que no lo conozca
 * Ganar partidas
-* … ¡o incluso por derrotas épicas!
+* … ¡o incluso por perder epicamente!
 
 Cada sello equivale a una papeleta para el sorteo de ese viernes.
 
 * Los viernes 3 y 10 habrá premios y regalos sorpresa.
-* El viernes 17 todos los sellos acumulados contarán para el gran sorteo final, cuyo premio estrella será Los Druidas de Edora, la novedad de Alea (Ravensburger) de este mes.
+* El viernes 17 todos los sellos acumulados contarán para el gran sorteo final, cuyo premio estrella será Los Druidas de Edora, el último juego de Stefan Feld, que publica este mes Alea (Ravensburger).
 
 <img src="../../public/images/blog/events/oktoberfeld_tote_bags.webp" alt="Pasaporte Oktoberfeld" style="width: 100%;">
 
