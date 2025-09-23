@@ -21,7 +21,7 @@ Durante los tres primeros viernes del mes _(3, 10 y 17 de octubre, a partir de l
 
 ¡Todo el mundo! La entrada es gratuita y durante Oktoberfeld abrimos las puertas de la asociación para todo el mundo.
 
-Si aún no eres socio y quieres participar, escríbenos a [info@menteludic.com](mailto:info@menteludic.com) para avisarnos que quieres venir: será una gran ocasión para conocer nuestra sede y el ambiente de nuestra asociación.
+Si aún no eres socio y quieres participar, puedes escribirnos a [info@menteludic.com](mailto:info@menteludic.com) para avisarnos que quieres venir; o madarnos un mensaje [por Whatsapp](https://wa.me/34604524180): será una gran ocasión para conocer nuestra sede y el ambiente de nuestra asociación.
 
 ## Pasaporte Feld y sorteos
 
