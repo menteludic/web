@@ -48,8 +48,8 @@ Sí. Recomendamos pasar un viernes por la tarde para conocer el ambiente y jugar
     - Justificante de pago de la cuota.
 3) Cuotas:
     - Prueba (primera alta): 3 meses por 15 €.
-    - 3 meses: 45 €.
-    - 6 meses: 60 €.
+    - 3 meses: 40 €.
+    - 6 meses: 70 €.
     - 1 año: 120 € (90 € desde el segundo año).
 
 <a id="puedo-llevar-invitados"></a>
